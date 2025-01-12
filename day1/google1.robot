@@ -1,12 +1,10 @@
 *** Settings ***
-Library  Collections
 Library  SeleniumLibrary
-Library    XML
 
 *** Variables ***
 
 *** Test Cases ***
-ทดสอบใส่คำค้า PIM ควรเจอ สถาบันการจัดการปัญญาภิวัฒน์
+ทดสอบใส่คำว่า PIM ควรเจอ สถาบันการจัดการปัญญาภิวัฒน์
     เปิดเว็บเบราว์เซอร์และเข้า Google
     ใส่คำค้นหา
     กดปุ่ม Enter

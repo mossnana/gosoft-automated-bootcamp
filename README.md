@@ -32,3 +32,43 @@
 - ส่วนต่างๆของ Robot Framework (Settings, Variables, Test Cases และ Keywords) มีหน้าที่อะไร
 - สอนการใช้คำสั่งต่างๆ ใน SeleniumLibrary บน Robot Framework
 - แนะนำให้เขียน Business case ใน Test Cases และเขียนรายละเอียดการทำงานของแต่ละ Test Case ใน Keywords
+
+# Day 2
+Robot Framework (**Flow Based Testing**)
+## Test Scenario
+1 Senario ต่อ 1 User ที่ใช้ทดสอบ
+
+### Components
+- Arrange (Library, Data)
+- Act
+- Expected Result
+
+## Documents
+- Specifications
+- Wireframe
+- Figma Design
+
+## Libraries
+- ไม่ค่อยแนะนำให้ใช้ AppiumLibrary มันจะบวมขึ้นเรื่อยๆแล้วจะช้ามาก ให้ไปใช้เครื่องมือ Test ของตัวเอง
+
+## Project Structure
+- Story (or Service)
+  - UI
+    - Success Cases
+    - Failed Cases
+  - API
+    - Success Cases
+    - Failed Cases
+
+## คำแนะนำ
+- แนะนำให้ตั้ง Expected Result ในชื่อ Test Case เลย
+- แนะนำให้ทุกคนในทีมดู Report HTML แทนการให้ QA ไปทำ Report เอง เพื่อประหยัดเวลาตัว QA เอง
+- ถ้าแอปมีการ 2FA ให้ Programmer ทำการ Bypass หรือสร้าง User ที่ไม่ต้อง 2FA เพื่อประหยัดเวลา QA เอง (เพราะเรา Focus ที่ Logic หลัง Authentication)
+- หน้าที่การทดสอบ Validate fields เป็นหน้าที่ของ Frontend ให้ Robot ไปทดสอบ Business Flow แทนดีกว่า
+- แนะนำให้ใช้ข้อมูล UAT เป็นหลักในการทดสอบ SIT,local,Production
+- แนะนำให้ทำ Feature ที่กระทบ Business ก่อนเช่นการจ่ายเงิน โดยข้าม Login ไปก่อน
+
+## Specification
+- Rule (test cases) most clarify, most stability (robot files)
+- Workflow (test cases) (robot files)
+- Technical Activity (keyword) (resource files)
